@@ -1,0 +1,40 @@
+{% extends 'main.html'%} {% block body%}
+<!-- <div id="video-1">
+  <video src="001.mp4" controls autoplay></video>
+  <hr />
+  <div class="btn-group" role="group">
+    https://s3.goyal.club/static/{{ course }}/{{ submodule }}/{{ course_num }}.mp4 -->
+
+<style>
+  #container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  #player {
+    border-radius: 4px;
+    margin-bottom: 0px;
+  }
+</style>
+<h1>You are on {{ course }} course.</h1>
+<h2>Video is {{ course_num }} of {{ submodule }} module</h2>
+<hr />
+<div id="container">
+  <video id="player" height="700" width="300" playsinline controls autoplay crossorigin="anonymous">
+    <source src="https://s3.goyal.club/static/{{ course }}/{{ submodule }}/{{ course_num }}.mp4" type="video/mp4" />
+    <track kind="captions" label="English captions" src="https://s3.goyal.club/static/{{ course }}/{{ submodule }}/{{ course_num }}.vtt" srclang="en" default />
+  </video>
+  <div id="changecontrols">
+    <button type="button" class="btn btn-primary btn-lg float-left">Previous</button>
+    <button type="button" class="btn btn-primary btn-lg float-right">Next</button>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.5.6/plyr.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const player = new Plyr(document.getElementById("player"));
+  });
+  //player.volume = 0.7;
+  //player.ended boolean
+</script>
+
+{%endblock%}

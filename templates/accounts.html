@@ -1,0 +1,34 @@
+{% extends 'main.html'%} {% block body%}
+
+<div class="container mt-2">
+  <div class="row">
+    <div class="col-lg-6 mx-auto">
+      <main role="main">
+        <h1>Sign In</h1>
+        <hr />
+
+        <div class="row">
+          <div class="col">
+            <form method="post">
+              <div id="div_id_login" class="form-group">
+                <label for="id_login" class="col-form-label  requiredField"> E-mail<span class="asteriskField">*</span> </label>
+                <div class=""><input type="email" name="login" placeholder="E-mail address" autofocus="autofocus" class="textinput textInput form-control" required id="id_login" /></div>
+              </div>
+              <div id="div_id_password" class="form-group">
+                <label for="id_password" class="col-form-label  requiredField"> Password<span class="asteriskField">*</span> </label>
+                <div class=""><input type="password" name="password" placeholder="Password" class="textinput textInput form-control" required id="id_password" /></div>
+              </div>
+
+              <br />
+              <button class="btn btn-success btn-block" type="submit">Sign In</button>
+            </form>
+            <br />
+            <p><a href="/accounts/password/reset/">Forgot Password?</a></p>
+            <p>Don't have an account? Please <a href="/accounts/signup/">sign up</a> first.</p>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</div>
+{%endblock%}
