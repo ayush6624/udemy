@@ -19,7 +19,7 @@ def css(path):
 def find_corese(course, submodule, course_num):
     return render_template('course.html', course=course, submodule=submodule, course_num=course_num)
 
-
+# Account management
 @app.route('/accounts')
 def show_login():
     return render_template("accounts.html")

@@ -7,5 +7,3 @@ install:
   - pip install codecov flake8
 script:
   - flake8 .
-after_success:
-  - codecov
