@@ -1,103 +1,105 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
     <title>Home - Ayush Goyal</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" href="assets/css/styles.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+    <link rel="stylesheet" href="assets/css/styles.min.css" />
     <style>
-        ::-webkit-scrollbar {
-          display: none;
-        }
-      </style>
-</head>
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+  </head>
 
-<body>
+  <body>
     <nav class="navbar navbar-light navbar-expand bg-light navigation-clean">
-        <div class="container"><a class="navbar-brand" href="#">Ayush Goyal</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"></button>
-            <div class="collapse navbar-collapse" id="navcol-1"><a class="btn btn-primary ml-auto" role="button" href="/login">Accounts</a></div>
-        </div>
+      <div class="container">
+        <a class="navbar-brand" href="#">Ayush Goyal</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"></button>
+        <div class="collapse navbar-collapse" id="navcol-1"><a class="btn btn-primary ml-auto" role="button" href="/accounts">Accounts</a></div>
+      </div>
     </nav>
     <header class="masthead text-white text-center" style="background:url('assets/img/bg-masthead.jpg')no-repeat center center;background-size:cover;">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-9 mx-auto">
-                    <h1 class="mb-5">Get the Best Online Courses Experience</h1>
-                </div>
-                <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-                    <form action="/signup" method="post">
-                        <div class="form-row">
-                            <div class="col-12 col-md-9 mb-2 mb-md-0"><input class="form-control form-control-lg" type="email" placeholder="Enter your email..."></div>
-                            <div class="col-12 col-md-3"><button class="btn btn-primary btn-block btn-lg" type="submit">Sign up!</button></div>
-                        </div>
-                    </form>
-                </div>
-            </div>
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <h1 class="mb-5">Get the Best Online Courses Experience</h1>
+          </div>
+          <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+            <form action="/accounts/signup" method="post">
+              <div class="form-row">
+                <div class="col-12 col-md-9 mb-2 mb-md-0"><input class="form-control form-control-lg " name="signup_email" type="email" placeholder="Enter your email..." /></div>
+                <div class="col-12 col-md-3"><button class="btn btn-primary btn-block btn-lg" type="submit">Sign up!</button></div>
+              </div>
+            </form>
+          </div>
         </div>
+      </div>
     </header>
     <section class="features-icons bg-light text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="mx-auto features-icons-item mb-5 mb-lg-0 mb-lg-3">
-                        <div class="d-flex features-icons-icon"><i class="icon-screen-desktop m-auto text-primary" data-bs-hover-animate="pulse"></i></div>
-                        <h3>High Quality Content</h3>
-                        <p class="lead mb-0">Wide Variety Of Tech Courses To Choose From</p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="mx-auto features-icons-item mb-5 mb-lg-0 mb-lg-3">
-                        <div class="d-flex features-icons-icon"><i class="icon-layers m-auto text-primary" data-bs-hover-animate="pulse"></i></div>
-                        <h3>Good For Beginners</h3>
-                        <p class="lead mb-0">Many courses start from scratch so that you can enhance your skills</p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="mx-auto features-icons-item mb-5 mb-lg-0 mb-lg-3">
-                        <div class="d-flex features-icons-icon"><i class="icon-check m-auto text-primary" data-bs-hover-animate="pulse"></i></div>
-                        <h3>Easy to Use</h3>
-                        <p class="lead mb-0">Easily use and Request Courses And view them at your own Pace and Convenience</p>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="mx-auto features-icons-item mb-5 mb-lg-0 mb-lg-3">
+              <div class="d-flex features-icons-icon"><i class="icon-screen-desktop m-auto text-primary" data-bs-hover-animate="pulse"></i></div>
+              <h3>High Quality Content</h3>
+              <p class="lead mb-0">Wide Variety Of Tech Courses To Choose From</p>
             </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="mx-auto features-icons-item mb-5 mb-lg-0 mb-lg-3">
+              <div class="d-flex features-icons-icon"><i class="icon-layers m-auto text-primary" data-bs-hover-animate="pulse"></i></div>
+              <h3>Good For Beginners</h3>
+              <p class="lead mb-0">Many courses start from scratch so that you can enhance your skills</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="mx-auto features-icons-item mb-5 mb-lg-0 mb-lg-3">
+              <div class="d-flex features-icons-icon"><i class="icon-check m-auto text-primary" data-bs-hover-animate="pulse"></i></div>
+              <h3>Easy to Use</h3>
+              <p class="lead mb-0">Easily use and Request Courses And view them at your own Pace and Convenience</p>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
     <div id="courses" class="article-list">
-        <div class="container">
-            <div class="intro">
-                <h2 class="text-center">Courses</h2>
-            </div>
-            <div class="row articles">
-                <div class="col-sm-6 col-md-4 item"><img class="img-fluid" src="assets/img/51425579-d3636000-1bd5-11e9-93d6-61672d44b0c0.jpg">
-                    <h3 class="name">mongoDB</h3>
-                </div>
-                <div class="col-sm-6 col-md-4 item"><img class="img-fluid" src="assets/img/JavaScript-logo.png">
-                    <h3 class="name">Javascript</h3>
-                </div>
-                <div class="col-sm-6 col-md-4 item"><img class="img-fluid" src="assets/img/docker.jpg">
-                    <h3 class="name">Docker</h3>
-                </div>
-            </div>
+      <div class="container">
+        <div class="intro">
+          <h2 class="text-center">Courses</h2>
         </div>
+        <div class="row articles">
+          <div class="col-sm-6 col-md-4 item">
+            <img class="img-fluid" src="assets/img/51425579-d3636000-1bd5-11e9-93d6-61672d44b0c0.jpg" />
+            <h3 class="name">mongoDB</h3>
+          </div>
+          <div class="col-sm-6 col-md-4 item">
+            <img class="img-fluid" src="assets/img/JavaScript-logo.png" />
+            <h3 class="name">Javascript</h3>
+          </div>
+          <div class="col-sm-6 col-md-4 item">
+            <img class="img-fluid" src="assets/img/docker.jpg" />
+            <h3 class="name">Docker</h3>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="contact-clean">
-        <form name="name" placeholder="Name" action="/support">
-            <h2 class="text-center">Contact Me</h2>
-            <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Name"></div>
-            <div class="form-group"><input class="form-control is-invalid" type="email" name="email" placeholder="Email"><small class="form-text text-danger">Please enter a correct email address.</small></div>
-            <div class="form-group"><textarea class="form-control" name="message" placeholder="Message" rows="14"></textarea></div>
-            <div class="form-group"><button class="btn btn-primary" type="submit">send </button></div>
-        </form>
+      <form name="name" placeholder="Name" action="/support">
+        <h2 class="text-center">Contact Me</h2>
+        <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Name" /></div>
+        <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email" /><small class="form-text text-primary">We Will Reply on this Email ID.</small></div>
+        <div class="form-group"><textarea class="form-control" name="message" placeholder="Message" rows="14"></textarea></div>
+        <div class="form-group"><button class="btn btn-primary" type="submit">send</button></div>
+      </form>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/script.min.js"></script>
-</body>
-
+  </body>
 </html>
