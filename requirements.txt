@@ -1,2 +1,5 @@
  Flask==1.0.3 
  minio
+ pymongo
+ dnspython
+ bcrypt
