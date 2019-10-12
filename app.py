@@ -7,6 +7,7 @@ app = Flask(__name__)
 # app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 a = os.environ.get("MONGO_URI")
 mongo = pymongo.MongoClient(a)
+app.secret_key = "ayushgoyal"
 
 
 @app.route('/')
@@ -76,5 +77,4 @@ def not_found(e):
 
 
 if __name__ == "__main__":
-    app.secret_key = "ayushgoyal"
     app.run(debug=True, host='0.0.0.0', threaded=True)
