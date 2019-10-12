@@ -4,7 +4,7 @@ import pymongo
 import bcrypt
 
 app = Flask(__name__)
-app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
+# app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 a = os.environ.get("MONGO_URI")
 mongo = pymongo.MongoClient(a)
 
