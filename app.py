@@ -107,5 +107,10 @@ def not_found(e):
     return render_template("404.html"), 404
 
 
+@app.route('/list')
+def listb():
+    pass
+
+
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0', threaded=True)
