@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "env": { "MONGO_URI": "@mongo-url", "FLASK_SECRET_KEY": "@flask-secret-key" },
+  "env": { "MONGO_URI": "@mongo-url", "FLASK_SECRET_KEY": "@flask-secret-key", "S3_ACCESS_KEY": "@s3_access_key", "S3_SECRET_KEY": "@s3_secret_key" },
   "builds": [{ "src": "app.py", "use": "@now/python" }],
   "routes": [{ "src": "/(.*)", "dest": "app.py" }]
 }

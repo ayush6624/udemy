@@ -73,7 +73,6 @@ def login(action):
                 return "Invalid username/password combination"
             return "invalid username"
         elif request.method == 'GET':
-            print(1 + 1)
             return render_template('accounts.html')
     if (action == "signup"):
         if request.method == 'POST':
