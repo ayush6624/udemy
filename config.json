@@ -5,19 +5,7 @@
       "Effect": "Deny",
       "Principal": "*",
       "Action": ["s3:GetObject"],
-      "Resource": "arn:aws:s3:::hello/*",
-      "Condition": {
-        "StringNotLike": { "aws:Referer": ["https://courses.goyal.club/*"] }
-      }
-    },
-    {
-      "Effect": "Allow",
-      "Principal": "*",
-      "Action": "s3:GetObject",
-      "Resource": "arn:aws:s3:::hello/*",
-      "Condition": {
-        "StringLike": { "aws:Referer": ["https://courses.goyal.club/*"] }
-      }
+      "Resource": "arn:aws:s3:::static/*"
     }
   ]
 }

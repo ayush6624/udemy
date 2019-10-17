@@ -1,8 +1,11 @@
 from functools import wraps
 import sys
+from datetime import datetime, timedelta
+from minio.error import ResponseError, BucketNotEmpty
 import bcrypt
 import pymongo
 import os
+from bucket import client
 from flask import Flask, render_template, url_for, send_from_directory, \
     request, session, redirect, flash
 
@@ -44,9 +47,20 @@ def css(path):
 
 
 @app.route('/<course>/<submodule>/<course_num>')
+@login_required
 def find_corese(course, submodule, course_num):
+    url = course + '/' + submodule + '/' + course_num + '.mp4'
+    srt = course + '/' + submodule + '/' + course_num + '.vtt'
+    try:
+        video = client.presigned_get_object('static', url, expires=timedelta(minutes=30))
+        subtitles = client.presigned_get_object('static', srt, expires=timedelta(minutes=30))
+
+    except ResponseError as err:
+        print(err)
     '''Finds the course'''
-    return render_template('course.html', course=course, submodule=submodule, course_num=course_num)
+
+    return render_template('course.html', course=course, submodule=submodule, course_num=course_num,
+                           video=video, subtitles=subtitles)
 
 # Account management
 @app.route('/accounts')
