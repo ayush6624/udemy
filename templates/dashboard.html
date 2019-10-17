@@ -1,0 +1,43 @@
+{% extends 'main.html'%} {% block body%}
+<style>
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: none;
+    cursor: pointer;
+  }
+</style>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+        <div class="container">
+          <div class="intro">
+            <h2 class="text-center">Courses</h2>
+          </div>
+          <div class="row articles">
+            <div class="col-sm-6 col-md-4 item">
+              <a href="/mongodb/01/001">
+                <img class="img-fluid" src="assets/img/51425579-d3636000-1bd5-11e9-93d6-61672d44b0c0.jpg" />
+              </a>
+            </div>
+            <div class="col-sm-6 col-md-4 item">
+              <a href="/javascript/01/01">
+                <img class="img-fluid" src="assets/img/JavaScript-logo.png" />
+              </a>
+            </div>
+            <div class="col-sm-6 col-md-4 item">
+              <a href="/docker/01/001">
+                <img class="img-fluid" src="assets/img/docker.jpg" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="assets/js/script.min.js"></script>
+</body>
+
+{%endblock%}

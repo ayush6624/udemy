@@ -49,18 +49,17 @@ def css(path):
 @app.route('/<course>/<submodule>/<course_num>')
 @login_required
 def find_corese(course, submodule, course_num):
+    '''Generates a pre-signed url for the video and Finds the course and passes it
+    to the HTML Page'''
     url = course + '/' + submodule + '/' + course_num + '.mp4'
-    srt = course + '/' + submodule + '/' + course_num + '.vtt'
     try:
         video = client.presigned_get_object('static', url, expires=timedelta(minutes=30))
-        subtitles = client.presigned_get_object('static', srt, expires=timedelta(minutes=30))
 
     except ResponseError as err:
         print(err)
-    '''Finds the course'''
 
     return render_template('course.html', course=course, submodule=submodule, course_num=course_num,
-                           video=video, subtitles=subtitles)
+                           video=video)
 
 # Account management
 @app.route('/accounts')
@@ -121,9 +120,10 @@ def not_found(e):
     return render_template("404.html"), 404
 
 
-@app.route('/list')
-def listb():
-    pass
+@app.route('/dashboard')
+@login_required
+def dashboard():
+    return render_template('dashboard.html')
 
 
 if __name__ == "__main__":
