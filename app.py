@@ -115,9 +115,14 @@ def new_user():
     return redirect('index')
 
 
+@app.errorhandler(500)
+def syserror(e):
+    return render_template("404.html", error='500'), 500
+
+
 @app.errorhandler(404)
 def not_found(e):
-    return render_template("404.html"), 404
+    return render_template("404.html", error='404'), 404
 
 
 @app.route('/dashboard')
