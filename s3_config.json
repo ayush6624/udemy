@@ -7,7 +7,7 @@
       "Action": "s3:GetObject",
       "Resource": "arn:aws:s3:::static/*",
       "Condition": {
-        "StringLike": { "aws:Referer": ["https://courses.goyal.club/*"] }
+        "StringLike": { "aws:Referer": ["https://courses.ayushgoyal.dev/*"] }
       }
     },
     {
@@ -16,7 +16,7 @@
       "Action": ["s3:GetObject"],
       "Resource": "arn:aws:s3:::static/*",
       "Condition": {
-        "StringNotLike": { "aws:Referer": ["https://courses.goyal.club/*"] }
+        "StringNotLike": { "aws:Referer": ["https://courses.ayushgoyal.dev/*"] }
       }
     }
   ]
